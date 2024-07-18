@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BURNING 애니메이션</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+
+            const images = Array.from(document.getElementsByTagName("img"));
+
+            images.forEach( i => {                
+               
+                i.addEventListener("mouseover", () => {                    
+                    i.classList.toggle("show");
+                });
+            });
+
+        });////프로그램 마지막 부분임.
+    </script>
+    <style>
+        #burning {
+            max-width:900px; margin:auto; background: black;
+            text-align: center; padding:50px;
+        }
+        h1 {color: white;}
+        img {
+            opacity:0.2; transition:opacity 0.8s;
+        }
+        img.show {
+            opacity:1; 
+        }
+    </style>
+</head>
+<body>
+    <section id="burning">
+        <h1>흐릿한 이미지에 마우스를 갖다대면, 선명하게 보입니다.</h1>
+        <div>
+            <img src="images/B.png" alt="B">
+            <img src="images/U.png" alt="U">
+            <img src="images/R.png" alt="R">
+            <img src="images/N.png" alt="N">
+            <img src="images/I.png" alt="I">
+            <img src="images/N2.png" alt="N">
+            <img src="images/G.png" alt="G">
+        </div>
+    </section>
+</body>
+</html>
